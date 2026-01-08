@@ -1,0 +1,110 @@
+timestamp,name,task,status
+2026-01-08T09:00:00Z,Vision-Team,Define the core problem to solve,in-progress
+2026-01-08T09:01:00Z,Vision-Team,Define the target user (who exactly),in-progress
+2026-01-08T09:02:00Z,Vision-Team,Write a 1-line mission statement,in-progress
+2026-01-08T09:03:00Z,Vision-Team,Write a 1-paragraph vision statement,in-progress
+2026-01-08T09:04:00Z,Vision-Team,Define short-term goals (3 months),in-progress
+2026-01-08T09:05:00Z,Vision-Team,Define mid-term goals (1 year),in-progress
+2026-01-08T09:06:00Z,Vision-Team,Define long-term goals (5 years),in-progress
+2026-01-08T09:07:00Z,Vision-Team,Identify what NOT to build initially,in-progress
+2026-01-08T09:08:00Z,Vision-Team,Decide ethical boundaries of the project,in-progress
+2026-01-08T09:09:00Z,Vision-Team,Decide success metrics (what winning means),in-progress
+
+2026-01-08T09:10:00Z,Vision-Team,Market research (basic industry scan),in-progress
+2026-01-08T09:11:00Z,Vision-Team,Identify top 5 competitors,in-progress
+2026-01-08T09:12:00Z,Vision-Team,Identify alternatives users currently use,in-progress
+2026-01-08T09:13:00Z,Vision-Team,Study competitor strengths,in-progress
+2026-01-08T09:14:00Z,Vision-Team,Study competitor weaknesses,in-progress
+2026-01-08T09:15:00Z,Vision-Team,Identify gaps in the market,in-progress
+2026-01-08T09:16:00Z,Vision-Team,Talk to 5–10 potential users,in-progress
+2026-01-08T09:17:00Z,Vision-Team,Write user pain points clearly,in-progress
+2026-01-08T09:18:00Z,Vision-Team,Validate if pain is real or assumed,in-progress
+2026-01-08T09:19:00Z,Vision-Team,Decide if problem is worth solving,in-progress
+
+2026-01-08T09:20:00Z,Vision-Team,Brainstorm solution ideas,in-progress
+2026-01-08T09:21:00Z,Vision-Team,Filter ideas based on feasibility,in-progress
+2026-01-08T09:22:00Z,Vision-Team,Select one core solution,in-progress
+2026-01-08T09:23:00Z,Vision-Team,Define MVP (minimum viable product),in-progress
+2026-01-08T09:24:00Z,Vision-Team,List MVP features only,in-progress
+2026-01-08T09:25:00Z,Vision-Team,Remove nice-to-have features,in-progress
+2026-01-08T09:26:00Z,Vision-Team,Define user journey step by step,in-progress
+2026-01-08T09:27:00Z,Vision-Team,Create basic flow diagram,in-progress
+2026-01-08T09:28:00Z,Vision-Team,Define core value proposition,in-progress
+2026-01-08T09:29:00Z,Vision-Team,Decide project scope boundaries,in-progress
+
+2026-01-08T09:30:00Z,Vision-Team,Identify required roles (tech, design, ops),in-progress
+2026-01-08T09:31:00Z,Vision-Team,Assign responsibilities clearly,in-progress
+2026-01-08T09:32:00Z,Vision-Team,Define decision-maker(s),in-progress
+2026-01-08T09:33:00Z,Vision-Team,Define communication hierarchy,in-progress
+2026-01-08T09:34:00Z,Vision-Team,Create daily/weekly meeting structure,in-progress
+2026-01-08T09:35:00Z,Vision-Team,Set internal rules & discipline,in-progress
+2026-01-08T09:36:00Z,Vision-Team,Define conflict resolution process,in-progress
+2026-01-08T09:37:00Z,Vision-Team,Decide documentation standards,in-progress
+2026-01-08T09:38:00Z,Vision-Team,Decide tools for collaboration,in-progress
+2026-01-08T09:39:00Z,Vision-Team,Establish accountability culture,in-progress
+
+2026-01-08T09:40:00Z,Vision-Team,Decide tech stack frontend,in-progress
+2026-01-08T09:41:00Z,Vision-Team,Decide tech stack backend,in-progress
+2026-01-08T09:42:00Z,Vision-Team,Decide database approach,in-progress
+2026-01-08T09:43:00Z,Vision-Team,Decide hosting/cloud platform,in-progress
+2026-01-08T09:44:00Z,Vision-Team,Create Git repository,in-progress
+2026-01-08T09:45:00Z,Vision-Team,Set up version control rules,in-progress
+2026-01-08T09:46:00Z,Vision-Team,Define coding standards,in-progress
+2026-01-08T09:47:00Z,Vision-Team,Set up development environments,in-progress
+2026-01-08T09:48:00Z,Vision-Team,Decide CI/CD approach,in-progress
+2026-01-08T09:49:00Z,Vision-Team,Create basic project folder structure,in-progress
+
+2026-01-08T09:50:00Z,Vision-Team,Define UI philosophy,in-progress
+2026-01-08T09:51:00Z,Vision-Team,Sketch rough wireframes,in-progress
+2026-01-08T09:52:00Z,Vision-Team,Decide branding tone,in-progress
+2026-01-08T09:53:00Z,Vision-Team,Choose color palette,in-progress
+2026-01-08T09:54:00Z,Vision-Team,Choose typography,in-progress
+2026-01-08T09:55:00Z,Vision-Team,Design basic logo,in-progress
+2026-01-08T09:56:00Z,Vision-Team,Define layout patterns,in-progress
+2026-01-08T09:57:00Z,Vision-Team,Decide accessibility basics,in-progress
+2026-01-08T09:58:00Z,Vision-Team,Create design consistency rules,in-progress
+2026-01-08T09:59:00Z,Vision-Team,Review design from user perspective,in-progress
+
+2026-01-08T10:00:00Z,Vision-Team,Decide company structure,in-progress
+2026-01-08T10:01:00Z,Vision-Team,Draft terms and conditions,in-progress
+2026-01-08T10:02:00Z,Vision-Team,Draft privacy policy outline,in-progress
+2026-01-08T10:03:00Z,Vision-Team,Address data protection needs,in-progress
+2026-01-08T10:04:00Z,Vision-Team,Decide IP ownership rules,in-progress
+2026-01-08T10:05:00Z,Vision-Team,NDA template creation,in-progress
+2026-01-08T10:06:00Z,Vision-Team,Ethics review of solution,in-progress
+2026-01-08T10:07:00Z,Vision-Team,Define misuse prevention rules,in-progress
+2026-01-08T10:08:00Z,Vision-Team,Compliance check,in-progress
+2026-01-08T10:09:00Z,Vision-Team,Risk identification legal and ethical,in-progress
+
+2026-01-08T10:10:00Z,Vision-Team,Decide revenue model,in-progress
+2026-01-08T10:11:00Z,Vision-Team,Decide pricing logic,in-progress
+2026-01-08T10:12:00Z,Vision-Team,Estimate basic costs,in-progress
+2026-01-08T10:13:00Z,Vision-Team,Define burn rate expectations,in-progress
+2026-01-08T10:14:00Z,Vision-Team,Identify funding needs,in-progress
+2026-01-08T10:15:00Z,Vision-Team,Decide bootstrap vs funding,in-progress
+2026-01-08T10:16:00Z,Vision-Team,Identify potential partners,in-progress
+2026-01-08T10:17:00Z,Vision-Team,Define scalability assumptions,in-progress
+2026-01-08T10:18:00Z,Vision-Team,Create simple financial projection,in-progress
+2026-01-08T10:19:00Z,Vision-Team,Decide sustainability strategy,in-progress
+
+2026-01-08T10:20:00Z,Vision-Team,Break MVP into tasks,in-progress
+2026-01-08T10:21:00Z,Vision-Team,Create sprint plan,in-progress
+2026-01-08T10:22:00Z,Vision-Team,Define milestones,in-progress
+2026-01-08T10:23:00Z,Vision-Team,Decide delivery timelines,in-progress
+2026-01-08T10:24:00Z,Vision-Team,Set quality benchmarks,in-progress
+2026-01-08T10:25:00Z,Vision-Team,Create testing checklist,in-progress
+2026-01-08T10:26:00Z,Vision-Team,Define bug tracking process,in-progress
+2026-01-08T10:27:00Z,Vision-Team,Prepare rollback strategy,in-progress
+2026-01-08T10:28:00Z,Vision-Team,Decide launch criteria,in-progress
+2026-01-08T10:29:00Z,Vision-Team,Internal demo readiness,in-progress
+
+2026-01-08T10:30:00Z,Vision-Team,Decide soft launch strategy,in-progress
+2026-01-08T10:31:00Z,Vision-Team,Decide target launch audience,in-progress
+2026-01-08T10:32:00Z,Vision-Team,Prepare onboarding flow,in-progress
+2026-01-08T10:33:00Z,Vision-Team,Create feedback collection system,in-progress
+2026-01-08T10:34:00Z,Vision-Team,Define analytics metrics,in-progress
+2026-01-08T10:35:00Z,Vision-Team,Monitor early user behavior,in-progress
+2026-01-08T10:36:00Z,Vision-Team,Collect user feedback,in-progress
+2026-01-08T10:37:00Z,Vision-Team,Prioritize improvements,in-progress
+2026-01-08T10:38:00Z,Vision-Team,Decide iteration cycle,in-progress
+2026-01-08T10:39:00Z,Vision-Team,Reflect continue pivot or stop,in-progress

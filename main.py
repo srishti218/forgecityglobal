@@ -74,3 +74,41 @@ def log_karya(karya: KaryaLog):
         "message": "Karya logged successfully",
         "timestamp": timestamp
     }
+
+@app.get("/karya/all")
+def get_all_karyas():
+    rows = []
+    # print(os.path.exists(CSV_FILE))
+    if not os.path.exists(CSV_FILE):
+        return rows
+
+    with open("karya_log.csv", mode="r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row:  # skip empty rows
+                rows.append(row)
+    # print(rows)
+    return rows
+
+TODAY_KARYA_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "today_karya.csv"
+)
+
+@app.get("/karya/todayskarya")
+def get_all_todayskaryas():
+    rows = []
+
+    # print("Today CSV exists:", os.path.exists(TODAY_KARYA_FILE))
+
+    if not os.path.exists(TODAY_KARYA_FILE):
+        return rows
+
+    with open(TODAY_KARYA_FILE, mode="r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row:
+                rows.append(row)
+
+    # print("Today's Karyas:", rows)
+    return rows

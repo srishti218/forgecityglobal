@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Srishti’s Team | Today’s Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: #f4f6fb;
+      padding: 32px;
+      color: #111827;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #6b7280;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .karya-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .karya-card {
+      display: flex;
+      gap: 14px;
+      background: #fff;
+      padding: 14px 16px;
+      border-radius: 14px;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e5e7eb;
+    }
+
+    .karya-info {
+      flex: 1;
+    }
+
+    .karya-info strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .karya-info span {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .status {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 999px;
+      text-transform: capitalize;
+    }
+
+    .completed {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .in-progress {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .pending {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .time {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .card {
+      background: #fff;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 14px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+    }
+
+    button {
+      background: #111827;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background: #1f2937;
+    }
+
+    .tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 30px;
+}
+
+.tab-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.tab-btn.active {
+  background: #111827;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Srishti’s Team</h1>
+    
+    <div class="tabs">
+  <button class="tab-btn active" onclick="openTab('today')">
+    Today’s Karya
+  </button>
+  <button class="tab-btn" onclick="openTab('all')">
+   Log & All Karyas Done
+  </button>
+</div>
+<div id="today" class="tab-content active">
+
+    <h3>Today’s Karya</h3>
+
+<table id="todaysKaryaTable" style="
+  width:100%;
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom:40px;
+  border-collapse:collapse;
+">
+  <thead style="background:#f9fafb;">
+    <tr>
+      <th style="padding:14px;text-align:left;">Member</th>
+      <th style="padding:14px;text-align:left;">Task</th>
+      <th style="padding:14px;text-align:left;">Status</th>
+      <th style="padding:14px;text-align:left;">Time</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+   </div>
+<div id="all" class="tab-content">
+
+
+    <!-- ========================= -->
+    <!-- Log Your Karya -->
+    <!-- ========================= -->
+    <div class="card">
+      <h3>Log Your Karya</h3>
+
+      <input id="name" placeholder="Your Name" />
+      <input id="task" placeholder="What are you working on?" />
+
+      <select id="status">
+        <option value="in-progress">In Progress</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+
+      <button onclick="submitKarya()">Submit</button>
+    </div>
+
+     <!-- ========================= -->
+    <!-- All Karyas -->
+    <!-- ========================= -->
+    <div id="karyaList" class="karya-list"></div>
+  </div>
+</div>
+
+  <script>
+    function avatarUrl(name) {
+      return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`;
+    }
+
+    async function loadKaryas() {
+      const res = await fetch("/karya/all");
+      const data = await res.json();
+
+      const container = document.getElementById("karyaList");
+      container.innerHTML = "";
+
+      data.reverse().forEach(row => {
+        const div = document.createElement("div");
+        div.className = "karya-card";
+
+        div.innerHTML = `
+          <img class="avatar" src="${avatarUrl(row.name)}" />
+          <div class="karya-info">
+            <strong>${row.name}</strong>
+            <span>${row.task}</span>
+            <div class="time">${new Date(row.timestamp).toLocaleString()}</div>
+          </div>
+          <div class="status ${row.status}">${row.status}</div>
+        `;
+
+        container.appendChild(div);
+      });
+    }
+
+    async function submitKarya() {
+      const name = document.getElementById("name").value.trim();
+      const task = document.getElementById("task").value.trim();
+      const status = document.getElementById("status").value;
+
+      if (!name || !task) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      await fetch("/karya/log", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, task, status })
+      });
+
+      document.getElementById("name").value = "";
+      document.getElementById("task").value = "";
+
+      loadKaryas();
+    }
+
+    loadKaryas();
+
+  async function loadTodaysKarya() {
+    const res = await fetch("/karya/todayskarya");
+    const data = await res.json();
+
+    const tbody = document.querySelector("#todaysKaryaTable tbody");
+    tbody.innerHTML = "";
+
+    data.forEach(row => {
+      const tr = document.createElement("tr");
+
+      tr.innerHTML = `
+        <td style="padding:12px;display:flex;align-items:center;gap:10px;">
+          <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(row.name)}&background=random"
+               style="width:32px;height:32px;border-radius:50%;" />
+          <strong>${row.name}</strong>
+        </td>
+        <td style="padding:12px;">${row.task}</td>
+        <td style="padding:12px;">
+          <span class="status ${row.status}">${row.status}</span>
+        </td>
+        <td style="padding:12px;font-size:12px;color:#6b7280;">
+          ${new Date(row.timestamp).toLocaleString()}
+        </td>
+      `;
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  loadTodaysKarya();
+  function openTab(tabId) {
+    document.querySelectorAll(".tab-content")
+      .forEach(t => t.classList.remove("active"));
+
+    document.querySelectorAll(".tab-btn")
+      .forEach(b => b.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+
+    event.target.classList.add("active");
+  }
+  </script>
+
+</body>
+</html>
