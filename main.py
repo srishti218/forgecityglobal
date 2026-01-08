@@ -46,6 +46,13 @@ init_csv()
 # =============================
 # Routes
 # =============================
+@app.get("/", response_class=HTMLResponse)
+async def srishti_team(request: Request):
+    return templates.TemplateResponse(
+        "landing.html",
+        {"request": request}
+    )
+
 
 @app.get("/srishtisteam", response_class=HTMLResponse)
 async def srishti_team(request: Request):
